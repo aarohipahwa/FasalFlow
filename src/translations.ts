@@ -1,9 +1,24 @@
-export type Language = 'en' | 'hi';
+export type Language = 'en' | 'hi' | 'mr' | 'ta' | 'ur' | 'gu' | 'bn' | 'ml';
+
+export const languageNames: Record<Language, string> = {
+  en: 'English',
+  hi: 'हिंदी',
+  mr: 'मराठी',
+  ta: 'தமிழ்',
+  ur: 'اردو',
+  gu: 'ગુજરાતી',
+  bn: 'বাংলা',
+  ml: 'മലയാളം',
+};
+
+export const languageShort: Record<Language, string> = {
+  en: 'EN', hi: 'हिं', mr: 'मर', ta: 'தமி', ur: 'اردو', gu: 'ગુ', bn: 'বাং', ml: 'മല',
+};
 
 export const translations = {
   // Brand & shared
   brandTagline: { en: 'Smart mandi access', hi: 'स्मार्ट मंडी एक्सेस' },
-  changeLanguage: { en: 'हिंदी', hi: 'English' },
+  changeLanguage: { en: 'Language', hi: 'भाषा', mr: 'भाषा', ta: 'மொழி', ur: 'زبان', gu: 'ભાષા', bn: 'ভাষা', ml: 'ഭാഷ' },
 
   // Welcome screen
   welcomeEyebrow: { en: 'Government procurement made simple', hi: 'सरकारी खरीद, अब आसान' },
@@ -24,7 +39,7 @@ export const translations = {
   wheatQuintal: { en: 'Wheat / quintal', hi: 'गेहूं / क्विंटल' },
 
   // Phone screen
-  back: { en: 'Back', hi: 'वापस' },
+  back: { en: 'Back', hi: 'वापस', mr: 'मागे', ta: 'மீண்டும்', ur: 'واپس', gu: 'પાછળ', bn: 'ফিরে যান', ml: 'തിരികെ' },
   welcomeToFasal: { en: 'Welcome to Fasal Flow', hi: 'फसल फ्लो में आपका स्वागत है' },
   phoneSubtitle: { en: 'Enter your mobile number to get started. We’ll send you a one-time verification code.', hi: 'अपना मोबाइल नंबर डालें। हम एक वन-टाइम कोड भेजेंगे।' },
   mobileNumber: { en: 'Mobile number', hi: 'मोबाइल नंबर' },
@@ -62,27 +77,27 @@ export const translations = {
   infoSecure: { en: 'Your information is secure and private', hi: 'आपकी जानकारी सुरक्षित है' },
 
   // Dashboard layout
-  mandiOperations: { en: 'Mandi operations', hi: 'मंडी संचालन' },
-  farmerSpace: { en: 'Farmer space', hi: 'किसान स्थान' },
+  mandiOperations: { en: 'Mandi operations', hi: 'मंडी संचालन', mr: 'मंडी संचालन', ta: 'மண்டி செயல்பாடு', ur: 'منڈی آپریشن', gu: 'મંડી સંચાલન', bn: 'মণ্ডি পরিচালনা', ml: 'മണ്ഡി പ്രവർത്തനങ്ങൾ' },
+  farmerSpace: { en: 'Farmer space', hi: 'किसान स्थान', mr: 'शेतकरी स्थान', ta: 'விவசாயி இடம்', ur: 'کسان جگہ', gu: 'ખેડૂત સ્થળ', bn: 'কৃষক স্থান', ml: 'കർഷക സ്ഥലം' },
   goodMorningRamesh: { en: 'Good morning, Ramesh', hi: 'सुप्रभात, रमेश' },
   goodAfternoonRamesh: { en: 'Good afternoon, Ramesh', hi: 'गुड आफ्टरनून, रमेश' },
   goodEveningRamesh: { en: 'Good evening, Ramesh', hi: 'शुभ संध्या, रमेश' },
-  goodMorning: { en: 'Good morning 🌅', hi: 'सुप्रभात 🌅' },
-  goodAfternoon: { en: 'Good afternoon ☀️', hi: 'गुड आफ्टरनून ☀️' },
-  goodEvening: { en: 'Good evening 🌙', hi: 'शुभ संध्या 🌙' },
+  goodMorning: { en: 'Good morning 🌅', hi: 'सुप्रभात 🌅', mr: 'सुप्रभात 🌅', ta: 'காலை வணக்கம் 🌅', ur: 'صبح بخیر 🌅', gu: 'સુપ્રભાત 🌅', bn: 'সুপ্রভাত 🌅', ml: 'സുപ്രഭാതം 🌅' },
+  goodAfternoon: { en: 'Good afternoon ☀️', hi: 'गुड आफ्टरनून ☀️', mr: 'गुड आफ्टरनून ☀️', ta: 'மதிய வணக்கம் ☀️', ur: 'گود آفٹرنون ☀️', gu: 'ગુડ આફ્ટરનૂન ☀️', bn: 'গুড আফটারনুন ☀️', ml: 'ഗുഡ് ആഫ്റ്റർനൂൺ ☀️' },
+  goodEvening: { en: 'Good evening 🌙', hi: 'शुभ संध्या 🌙', mr: 'शुभ संध्या 🌙', ta: 'மாலை வணக்கம் 🌙', ur: 'شام بخیر 🌙', gu: 'શુભ સંધ્યા 🌙', bn: 'শুভ সন্ধ্যা 🌙', ml: 'ശുഭ സന്ധ്യ 🌙' },
   guestFarmer: { en: 'Guest Farmer', hi: 'अतिथि किसान' },
   locationNotSet: { en: 'Location not set', hi: 'स्थान सेट नहीं' },
   jaipurCentral: { en: 'Jaipur Central', hi: 'जयपुर सेंट्रल' },
-  myProfile: { en: 'My profile', hi: 'मेरी प्रोफ़ाइल' },
-  signOut: { en: 'Sign out', hi: 'साइन आउट' },
+  myProfile: { en: 'My profile', hi: 'मेरी प्रोफ़ाइल', mr: 'माझी प्रोफाइल', ta: 'என் சுயவிவரம்', ur: 'میری پروفائل', gu: 'મારી પ્રોફાઇલ', bn: 'আমার প্রোফাইল', ml: 'എന്റെ പ്രൊഫൈൽ' },
+  signOut: { en: 'Sign out', hi: 'साइन आउट', mr: 'साइन आउट', ta: 'வெளியேறு', ur: 'سائن آؤٹ', gu: 'સાઇન આઉટ', bn: 'সাইন আউট', ml: 'സൈൻ ഔട്ട്' },
 
   // Nav labels - farmer
-  navHome: { en: 'Home', hi: 'होम' },
-  navBookSlot: { en: 'Book slot', hi: 'स्लॉट बुक करें' },
-  navMyPass: { en: 'My pass', hi: 'मेरा पास' },
-  navMspRates: { en: 'MSP rates', hi: 'एमएसपी दर' },
-  navOverview: { en: 'Overview', hi: 'ओवरव्यू' },
-  navScanner: { en: 'Scanner', hi: 'स्कैनर' },
+  navHome: { en: 'Home', hi: 'होम', mr: 'होम', ta: 'முகப்பு', ur: 'ہوم', gu: 'હોમ', bn: 'হোম', ml: 'ഹോം' },
+  navBookSlot: { en: 'Book slot', hi: 'स्लॉट बुक करें', mr: 'स्लॉट बुक करा', ta: 'ச்லாட் பதிவு', ur: 'سلاٹ بک کریں', gu: 'સ્લોટ બુક કરો', bn: 'স্লট বুক করুন', ml: 'സ്ലോട്ട് ബുക്ക് ചെയ്യുക' },
+  navMyPass: { en: 'My pass', hi: 'मेरा पास', mr: 'माझा पास', ta: 'என் பாஸ்', ur: 'میرا پاس', gu: 'મારો પાસ', bn: 'আমার পাস', ml: 'എന്റെ പാസ്' },
+  navMspRates: { en: 'MSP rates', hi: 'एमएसपी दर', mr: 'एमएसपी दर', ta: 'எம்எஸ்பி விகிதம்', ur: 'ایم ایس پی ریٹ', gu: 'એમએસપી દર', bn: 'এমএসপি হার', ml: 'എംഎസ്പി നിരക്ക്' },
+  navOverview: { en: 'Overview', hi: 'ओवरव्यू', mr: 'ओव्हरव्ह्यू', ta: 'கண்ணோட்டம்', ur: 'اوورویو', gu: 'ઓવરવ્યૂ', bn: 'ওভারভিউ', ml: 'അവലോകനം' },
+  navScanner: { en: 'Scanner', hi: 'स्कैनर', mr: 'स्कॅनर', ta: 'ஸ்கேனர்', ur: 'اسکینر', gu: 'સ્કેનર', bn: 'স্ক্যানার', ml: 'സ്കാനർ' },
 
   // Farmer dashboard
   tuesdayDate: { en: 'Tuesday, 14 May 2024', hi: 'मंगलवार, 14 मई 2024' },
@@ -217,6 +232,10 @@ export const translations = {
   searchCrop: { en: 'Search crop…', hi: 'फसल खोजें…' },
   selectCrop: { en: 'Select your crop', hi: 'अपनी फसल चुनें' },
   nearbyCentres: { en: 'Nearby available procurement centres', hi: 'पास के उपलब्ध क्रय केंद्र' },
+  distanceMapTitle: { en: 'Centres near you', hi: 'आपके पास के केंद्र' },
+  distanceMapHint: { en: 'Distance from your location', hi: 'आपके स्थान से दूरी' },
+  yourLocation: { en: 'Your location', hi: 'आपका स्थान' },
+  kmAway: { en: 'km away', hi: 'किमी दूर' },
   slotsAvailable: { en: 'slots available', hi: 'स्लॉट उपलब्ध' },
   noSlotsAvailable: { en: 'No slots available', hi: 'कोई स्लॉट उपलब्ध नहीं' },
   full: { en: 'Full', hi: 'भरा हुआ' },
@@ -232,8 +251,8 @@ export const translations = {
   noCentresForCrop: { en: 'No centres available for this crop. Please choose another crop.', hi: 'इस फसल के लिए कोई केंद्र उपलब्ध नहीं। कृपया अन्य फसल चुनें।' },
 
   // My bookings
-  myBookings: { en: 'My bookings', hi: 'मेरी बुकिंग' },
-  navMyBookings: { en: 'My bookings', hi: 'मेरी बुकिंग' },
+  myBookings: { en: 'My bookings', hi: 'मेरी बुकिंग', mr: 'माझी बुकिंग', ta: 'என் புக்கிங்', ur: 'میری بکنگ', gu: 'મારી બુકિંગ', bn: 'আমার বুকিং', ml: 'എന്റെ ബുക്കിംഗ്' },
+  navMyBookings: { en: 'My bookings', hi: 'मेरी बुकिंग', mr: 'माझी बुकिंग', ta: 'என் புக்கிங்', ur: 'میری بکنگ', gu: 'મારી બુકિંગ', bn: 'আমার বুকিং', ml: 'എന്റെ ബുക്കിംഗ്' },
   activeBookings: { en: 'Active bookings', hi: 'सक्रिय बुकिंग' },
   cancelledBookings: { en: 'Cancelled bookings', hi: 'रद्द बुकिंग' },
   noActiveBookings: { en: 'No active bookings yet. Book a slot to get started.', hi: 'कोई सक्रिय बुकिंग नहीं। शुरू करने के लिए स्लॉट बुक करें।' },
@@ -257,7 +276,7 @@ export const translations = {
   viewManageBookings: { en: 'View and manage your bookings', hi: 'अपनी बुकिंग देखें और प्रबंधित करें' },
 
   // Truck pooling
-  navTruckPool: { en: 'Truck pooling', hi: 'ट्रक पूलिंग' },
+  navTruckPool: { en: 'Truck pooling', hi: 'ट्रक पूलिंग', mr: 'ट्रक पूलिंग', ta: 'டிரக் பூலிங்', ur: 'ٹرک پولنگ', gu: 'ટ્રક પૂલિંગ', bn: 'ট্রাক পুলিং', ml: 'ട്രക് പൂളിംഗ്' },
   truckPooling: { en: 'Truck pooling', hi: 'ट्रक पूलिंग' },
   truckPoolDesc: { en: 'Share transport costs with nearby farmers heading to the same procurement centre.', hi: 'एक ही केंद्र जाने वाले किसानों के साथ परिवहन लागत साझा करें।' },
   findPool: { en: 'Find a pool', hi: 'पूल खोजें' },
@@ -305,8 +324,8 @@ export const translations = {
   liveTracking: { en: 'Live tracking', hi: 'लाइव ट्रैकिंग' },
 
   // Transport / Tractor Pooling — Earn module
-  tractorPooling: { en: 'Drive and Earn', hi: 'ड्राइव और कमाई' },
-  navTractorPool: { en: 'Drive and Earn', hi: 'ड्राइव और कमाई' },
+  tractorPooling: { en: 'Drive and Earn', hi: 'ड्राइव और कमाई', mr: 'ड्राइव्ह आणि कमाई', ta: 'ஓட்டு மற்றும் வருவாய்', ur: 'ڈرائیو اور کمائی', gu: 'ડ્રાઇવ અને કમાણી', bn: 'ড্রাইভ এবং আয়', ml: 'ഡ്രൈവ് ആൻഡ് കമായ്' },
+  navTractorPool: { en: 'Drive and Earn', hi: 'ड्राइव और कमाई', mr: 'ड्राइव्ह आणि कमाई', ta: 'ஓட்டு மற்றும் வருவாய்', ur: 'ڈرائیو اور کمائی', gu: 'ડ્રાઇવ અને કમાણી', bn: 'ড্রাইভ এবং আয়', ml: 'ഡ്രൈവ് ആൻഡ് കമായ്' },
   driverVerification: { en: 'Driver & Vehicle Verification', hi: 'ड्राइवर और वाहन सत्यापन' },
   verificationSubtitle: { en: 'Get verified to start accepting transport requests and earn income.', hi: 'परिवहन अनुरोध स्वीकारने और कमाई करने के लिए सत्यापित हों।' },
   drivingLicense: { en: 'Driving License', hi: 'ड्राइविंग लाइसेंस' },
@@ -343,10 +362,199 @@ export const translations = {
   rushHighAlert: { en: 'Mandi is expected to be HIGHLY CROWDED between 11 AM – 2 PM.', hi: 'मंडी दोपहर 11 बजे से 2 बजे के बीच अत्यधिक भीड़ वाली रहने की संभावना है।' },
   rushRecommendation: { en: 'Recommended visit: 8 AM – 10 AM (Low crowd & fast processing).', hi: 'सुझाया गए समय: सुबह 8 से 10 बजे (कम भीड़ और तेज प्रोसेसिंग)।' },
   bookRecommendedSlot: { en: 'Book Recommended Slot', hi: 'सुझाए गए समय पर स्लॉट बुक करें' },
+
+  // Aadhaar & OTP verification
+  aadhaarVerification: { en: 'Aadhaar Verification', hi: 'आधार सत्यापन' },
+  aadhaarNumber: { en: 'Aadhaar Number', hi: 'आधार नंबर' },
+  aadhaarPlaceholder: { en: 'Enter 12-digit Aadhaar number', hi: '12-अंकों का आधार नंबर दर्ज करें' },
+  verifyViaOtp: { en: 'Verify via OTP', hi: 'ओटीपी भेजें' },
+  aadhaarOtpSent: { en: 'OTP sent to your Aadhaar-linked mobile number', hi: 'आपके आधार से जुड़े मोबाइल नंबर पर ओटीपी भेजा गया' },
+  enterAadhaarOtp: { en: 'Enter 6-digit OTP', hi: '6-अंकों का ओटीपी दर्ज करें' },
+  verifyOtp: { en: 'Verify OTP', hi: 'ओटीपी सत्यापित करें' },
+  aadhaarVerified: { en: 'Aadhaar Verified', hi: 'आधार सत्यापित' },
+  aadhaarOtpError: { en: 'Please enter a valid 6-digit OTP', hi: 'कृपया सही 6-अंकों का ओटीपी दर्ज करें' },
+  resendOtp: { en: 'Resend OTP', hi: 'ओटीपी फिर भेजें' },
+
+  // Bank details
+  bankDetails: { en: 'Bank Details', hi: 'बैंक विवरण' },
+  bankDetailsSubtitle: { en: 'Required for direct benefit transfer (DBT) payments', hi: 'प्रत्यक्ष लाभांतरण (DBT) भुगतान के लिए आवश्यक' },
+  bankAccountNumber: { en: 'Bank Account Number', hi: 'बैंक खाता नंबर' },
+  reenterAccountNumber: { en: 'Re-enter Account Number', hi: 'खाता नंबर पुनः दर्ज करें' },
+  ifscCode: { en: 'IFSC Code', hi: 'आईएफएससी कोड' },
+  accountHolderName: { en: 'Account Holder Name', hi: 'खाताधारक का नाम' },
+  passbookUpload: { en: 'Upload Passbook Photo / Cancelled Cheque', hi: 'पासबुक फोटो अपलोड करें / रद्द चेक' },
+  passbookUploadHint: { en: 'Upload a clear photo of your passbook or cancelled cheque', hi: 'अपनी पासबुक या रद्द चेक की स्पष्ट फोटो अपलोड करें' },
+  accountNumberMismatch: { en: 'Account numbers do not match', hi: 'खाता नंबर मेल नहीं खाते' },
+  bankDetailsSaved: { en: 'Bank details saved successfully', hi: 'बैंक विवरण सफलतापूर्वक सहेजे गए' },
+
+  // Officer moisture content
+  moistureContent: { en: 'Moisture Content (%)', hi: 'नमी प्रतिशत (%)' },
+  moistureContentPlaceholder: { en: 'e.g. 12.5', hi: 'जैसे 12.5' },
+  moistureContentHint: { en: 'Standard wheat limit: 12–14%', hi: 'मानक गेहूं सीमा: 12–14%' },
+  saveMoisture: { en: 'Save Moisture Record', hi: 'नमी रिकॉर्ड सहेजें' },
+  moistureSaved: { en: 'Moisture record saved to verification report', hi: 'नमी रिकॉर्ड सत्यापन रिपोर्ट में सहेजा गया' },
+  moistureRecord: { en: 'Moisture Record', hi: 'नमी रिकॉर्ड' },
+
+  // Rejection feedback
+  rejectionFeedback: { en: 'Rejection Feedback / Remarks', hi: 'अस्वीकृति प्रतिक्रिया / टिप्पणी' },
+  rejectionReason: { en: 'Rejection Reason', hi: 'अस्वीकृति कारण' },
+  reasonHighMoisture: { en: 'High Moisture', hi: 'अधिक नमी' },
+  reasonForeignParticles: { en: 'Foreign Particles', hi: 'विदेशी कण' },
+  reasonDamagedGrain: { en: 'Damaged Grain', hi: 'क्षतिग्रस्त अनाज' },
+  reasonPoorQuality: { en: 'Poor Quality', hi: 'खराब गुणवत्ता' },
+  reasonOther: { en: 'Other', hi: 'अन्य' },
+  additionalRemarks: { en: 'Additional Remarks', hi: 'अतिरिक्त टिप्पणी' },
+  otherReasonRequired: { en: 'Please provide a reason', hi: 'कृपया कारण बताएं' },
+  rejectCrop: { en: 'Reject Crop', hi: 'फसल अस्वीकारें' },
+  acceptCrop: { en: 'Accept Crop', hi: 'फसल स्वीकारें' },
+  cropRejected: { en: 'Crop Rejected', hi: 'फसल अस्वीकृत' },
+  cropAccepted: { en: 'Crop Accepted', hi: 'फसल स्वीकृत' },
+  rejectionReasonLabel: { en: 'Reason', hi: 'कारण' },
+  officerRemarksLabel: { en: 'Officer Remarks', hi: 'अधिकारी टिप्पणी' },
+  noRejectionFeedback: { en: 'No rejection feedback yet', hi: 'अभी कोई अस्वीकृति प्रतिक्रिया नहीं' },
+  selectRejectionReason: { en: 'Select a rejection reason', hi: 'अस्वीकृति कारण चुनें' },
+  rejectionSaved: { en: 'Rejection feedback saved to farmer record', hi: 'अस्वीकृति प्रतिक्रिया किसान रिकॉर्ड में सहेजी गई' },
+  acceptanceSaved: { en: 'Crop acceptance saved to farmer record', hi: 'फसल स्वीकृति किसान रिकॉर्ड में सहेजी गई' },
+  procurementStatus: { en: 'Procurement Status', hi: 'खरीद स्थिति' },
+
+  // Onboarding step labels
+  onboardingStep1: { en: 'Personal Details', hi: 'व्यक्तिगत विवरण' },
+  onboardingStep2: { en: 'Aadhaar Verification', hi: 'आधार सत्यापन' },
+  onboardingStep3: { en: 'Bank Details', hi: 'बैंक विवरण' },
+  onboardingStep4: { en: 'Dashboard', hi: 'डैशबोर्ड' },
+  continueToAadhaar: { en: 'Continue to Aadhaar Verification', hi: 'आधार सत्यापन पर जाएं' },
+  continueToBank: { en: 'Continue to Bank Details', hi: 'बैंक विवरण पर जाएं' },
+  aadhaarStepSubtitle: { en: 'Verify your identity with your Aadhaar number. This is a demo verification — no real Aadhaar data is used.', hi: 'अपनी पहचान आधार नंबर से सत्यापित करें। यह एक डेमो सत्यापन है — कोई वास्तविक आधार डेटा उपयोग नहीं।' },
+  bankStepSubtitle: { en: 'Enter your bank details for direct benefit transfer payments.', hi: 'प्रत्यक्ष लाभांतरण भुगतान के लिए अपने बैंक विवरण दर्ज करें।' },
+  submitAndContinue: { en: 'Submit & Continue', hi: 'जमा करें और आगे बढ़ें' },
+  changeAadhaar: { en: 'Change Aadhaar number', hi: 'आधार नंबर बदलें' },
+  demoOtpHint: { en: 'Demo: Enter any 6 digits to verify', hi: 'डेमो: सत्यापित करने के लिए कोई भी 6 अंक दर्ज करें' },
+  passbookImageSelected: { en: 'Image selected', hi: 'चित्र चुना गया' },
+  removeImage: { en: 'Remove image', hi: 'चित्र हटाएं' },
+  onboardingComplete: { en: 'Onboarding complete! Opening your dashboard...', hi: 'ऑनबोर्डिंग पूर्ण! आपका डैशबोर्ड खुल रहा है...' },
+  ifscFormatError: { en: 'IFSC should be 4 letters + 7 alphanumeric (e.g. SBIN0001234)', hi: 'आईएफएससी 4 अक्षर + 7 अल्फ़ान्यूमेरिक होना चाहिए' },
+  accountNumberShort: { en: 'Account number must be at least 9 digits', hi: 'खाता नंबर कम से कम 9 अंकों का होना चाहिए' },
+  continueBtn: { en: 'Continue', hi: 'आगे बढ़ें' },
+  fieldRequired: { en: 'This field is required', hi: 'यह फ़ील्ड आवश्यक है' },
+  passbookRequired: { en: 'Please upload a passbook photo', hi: 'कृपया पासबुक फोटो अपलोड करें' },
+  invalidAadhaar: { en: 'Please enter a valid 12-digit Aadhaar number', hi: 'कृपया सही 12-अंकों का आधार नंबर दर्ज करें' },
+  cropStatusTitle: { en: 'Crop Verification Status', hi: 'फसल सत्यापन स्थिति' },
+  noCropStatus: { en: 'No crop verification yet', hi: 'अभी कोई फसल सत्यापन नहीं' },
+
+  // Driver role
+  iAmDriver: { en: "I'm a Driver", hi: 'मैं ड्राइवर हूं' },
+  driverRoleDesc: { en: 'Accept transport requests, navigate routes, and earn income.', hi: 'परिवहन अनुरोध स्वीकारें, रूट नेविगेट करें, और कमाई करें।' },
+  driverSpace: { en: 'Driver space', hi: 'ड्राइवर स्थान' },
+
+  // Driver onboarding
+  driverRegistration: { en: 'Driver Registration', hi: 'ड्राइवर पंजीकरण' },
+  driverRegistrationSubtitle: { en: 'Enter your details to start accepting transport requests.', hi: 'परिवहन अनुरोध स्वीकारने के लिए अपनी जानकारी दर्ज करें।' },
+  driverName: { en: 'Driver Name', hi: 'ड्राइवर का नाम' },
+  driverMobileNumber: { en: 'Mobile Number', hi: 'मोबाइल नंबर' },
+  drivingLicenceNumber: { en: 'Driving Licence Number', hi: 'ड्राइविंग लाइसेंस नंबर' },
+  pollutionCertNumber: { en: 'Pollution Certificate Number', hi: 'प्रदूषण प्रमाणपत्र नंबर' },
+  completeRegistration: { en: 'Complete Registration', hi: 'पंजीकरण पूर्ण करें' },
+  driverRegistrationComplete: { en: 'Registration complete! Opening your dashboard...', hi: 'पंजीकरण पूर्ण! आपका डैशबोर्ड खुल रहा है...' },
+
+  // Driver dashboard
+  navDriverDashboard: { en: 'Dashboard', hi: 'डैशबोर्ड' },
+  navUpcomingRequests: { en: 'Requests', hi: 'अनुरोध' },
+  navActiveTrip: { en: 'Active Trip', hi: 'सक्रिय यात्रा' },
+  navNearbyWarehouses: { en: 'Warehouses', hi: 'गोदाम' },
+  navDriverPayments: { en: 'Payments', hi: 'भुगतान' },
+  navTripHistory: { en: 'Trip History', hi: 'यात्रा इतिहास' },
+  navDriverProfile: { en: 'Profile', hi: 'प्रोफ़ाइल' },
+  driverDashboardTitle: { en: 'Driver Dashboard', hi: 'ड्राइवर डैशबोर्ड' },
+  nearbyWarehouses: { en: 'Nearby Warehouses', hi: 'पास के गोदाम' },
+  warehouseAvailable: { en: 'Available', hi: 'उपलब्ध' },
+  warehouseFull: { en: 'Full', hi: 'भरा हुआ' },
+  warehouseLimited: { en: 'Limited space', hi: 'सीमित जगह' },
+  viewRoute: { en: 'View Route', hi: 'रूट देखें' },
+  upcomingRequests: { en: 'Upcoming Requests', hi: 'आगामी अनुरोध' },
+  newRequest: { en: 'NEW REQUEST', hi: 'नया अनुरोध' },
+  requestStatus: { en: 'Request Status', hi: 'अनुरोध स्थिति' },
+  acceptRequest: { en: 'Accept Request', hi: 'अनुरोध स्वीकारें' },
+  declineRequest: { en: 'Decline Request', hi: 'अनुरोध अस्वीकारें' },
+  requestAccepted: { en: 'Request accepted. Trip added to your active routes.', hi: 'अनुरोध स्वीकृत। यात्रा आपके सक्रिय रूट में जोड़ी गई।' },
+  requestDeclined: { en: 'Request declined.', hi: 'अनुरोध अस्वीकृत।' },
+  viewDetails: { en: 'View Details', hi: 'विवरण देखें' },
+  noUpcomingRequests: { en: 'No upcoming requests right now.', hi: 'अभी कोई आगामी अनुरोध नहीं।' },
+  activeTrip: { en: 'Active Trip', hi: 'सक्रिय यात्रा' },
+  noActiveTrip: { en: 'No active trip. Accept a request to start.', hi: 'कोई सक्रिय यात्रा नहीं। शुरू करने के लिए अनुरोध स्वीकारें।' },
+  startTrip: { en: 'Start Trip', hi: 'यात्रा शुरू करें' },
+  completeTrip: { en: 'Complete Trip', hi: 'यात्रा पूर्ण करें' },
+  tripStarted: { en: 'Trip started. Drive to the procurement centre.', hi: 'यात्रा शुरू। क्रय केंद्र तक ड्राइव करें।' },
+  tripCompleted: { en: 'Trip completed successfully. Payment updated.', hi: 'यात्रा सफलतापूर्वक पूर्ण। भुगतान अपडेट हुआ।' },
+  routeStatus: { en: 'Route Status', hi: 'रूट स्थिति' },
+  estimatedTravelTime: { en: 'Est. Travel Time', hi: 'अनुमानित समय' },
+  tripHistory: { en: 'Trip History', hi: 'यात्रा इतिहास' },
+  noTripHistory: { en: 'No completed trips yet.', hi: 'अभी तक कोई पूर्ण यात्रा नहीं।' },
+  tripCompletedStatus: { en: 'Completed', hi: 'पूर्ण' },
+  paymentPending: { en: 'Pending', hi: 'लंबित' },
+  paymentCompleted: { en: 'Completed', hi: 'पूर्ण' },
+  driverPayments: { en: 'Payments', hi: 'भुगतान' },
+  totalEarnings: { en: 'Total Earnings', hi: 'कुल कमाई' },
+  pendingPayments: { en: 'Pending Payments', hi: 'लंबित भुगतान' },
+  paidPayments: { en: 'Paid', hi: 'भुगतान हुआ' },
+  transportPayment: { en: 'Transport Payment', hi: 'परिवहन भुगतान' },
+  driverProfile: { en: 'Driver Profile', hi: 'ड्राइवर प्रोफ़ाइल' },
+  driverVehicleNumber: { en: 'Vehicle Number Plate', hi: 'वाहन नंबर प्लेट' },
+
+  // Jute bag stock
+  juteBagStock: { en: 'Jute Bag Stock', hi: 'जूट बैग स्टॉक' },
+  juteBagAvailable: { en: 'Available Bags', hi: 'उपलब्ध बैग' },
+  juteBagCapacity: { en: 'Total Capacity', hi: 'कुल क्षमता' },
+  juteBagStatus: { en: 'Stock Status', hi: 'स्टॉक स्थिति' },
+  juteBagInStock: { en: 'In Stock', hi: 'स्टॉक में' },
+  juteBagLowStock: { en: 'Low Stock', hi: 'कम स्टॉक' },
+  juteBagOutOfStock: { en: 'Out of Stock', hi: 'स्टॉक खत्म' },
+  updateStock: { en: 'Update Stock', hi: 'स्टॉक अपडेट करें' },
+  saveStock: { en: 'Save', hi: 'सहेजें' },
+  stockUpdated: { en: 'Stock updated successfully', hi: 'स्टॉक सफलतापूर्वक अपडेट हुआ' },
+  lowJuteBagAlert: { en: 'LOW JUTE BAG STOCK', hi: 'जूट बैग स्टॉक कम' },
+  lowJuteBagWarning: { en: 'Jute bag stock has fallen below 20%. Please arrange additional bags.', hi: 'जूट बैग स्टॉक 20% से नीचे चला गया है। कृपया अतिरिक्त बैग की व्यवस्था करें।' },
+
+  // Order Jute Bags
+  orderJuteBags: { en: 'Order Jute Bags', hi: 'जूट बैग ऑर्डर करें' },
+  orderJuteBagsTitle: { en: 'Place Jute Bag Order', hi: 'जूट बैग ऑर्डर दें' },
+  orderQuantity: { en: 'Quantity (bags)', hi: 'मात्रा (बैग)' },
+  orderDestination: { en: 'Delivery Destination', hi: 'डिलीवरी गंतव्य' },
+  orderRequiredDate: { en: 'Required Date', hi: 'आवश्यक तिथि' },
+  placeOrder: { en: 'Place Order', hi: 'ऑर्डर दें' },
+  orderPlaced: { en: 'Order placed successfully', hi: 'ऑर्डर सफलतापूर्वक दिया गया' },
+  orderQuantityHint: { en: 'Enter number of jute bags needed', hi: 'आवश्यक जूट बैग की संख्या दर्ज करें' },
+
+  // Mandi Express
+  navMandiExpress: { en: 'Mandi Express', hi: 'मंडी एक्सप्रेस' },
+  mandiExpressTitle: { en: 'Mandi Express', hi: 'मंडी एक्सप्रेस' },
+  mandiExpressDesc: { en: 'View and dispatch nearby transport in real-time', hi: 'नजदीकी परिवहन को वास्तविक समय में देखें और भेजें' },
+  nearbyDrivers: { en: 'Nearby Active Drivers', hi: 'नजदीकी सक्रिय ड्राइवर' },
+  driverCapacity: { en: 'Capacity', hi: 'क्षमता' },
+  driverAvailable: { en: 'Available', hi: 'उपलब्ध' },
+  driverBusy: { en: 'Busy', hi: 'व्यस्त' },
+  sendRequest: { en: 'Send Request', hi: 'अनुरोध भेजें' },
+  requestSent: { en: 'Transport request sent to driver', hi: 'ड्राइवर को परिवहन अनुरोध भेजा गया' },
+  liveMap: { en: 'Live Map', hi: 'लाइव मानचित्र' },
+  driverDistance: { en: 'Distance', hi: 'दूरी' },
+
+  // Driver Navigation
+  navToWarehouse: { en: 'Navigation to Warehouse', hi: 'गोदाम तक नेविगेशन' },
+  liveNavigation: { en: 'Live Navigation', hi: 'लाइव नेविगेशन' },
+  remainingDistance: { en: 'Remaining Distance', hi: 'शेष दूरी' },
+  estimatedArrival: { en: 'Estimated Arrival', hi: 'अनुमानित आगमन' },
+  currentLocation: { en: 'Current Location', hi: 'वर्तमान स्थान' },
+  destination: { en: 'Destination', hi: 'गंतव्य' },
+  navigating: { en: 'Navigating', hi: 'नेविगेट हो रहा है' },
+  startNavigation: { en: 'Start Navigation', hi: 'नेविगेशन शुरू करें' },
 } as const;
 
 export type TranslationKey = keyof typeof translations;
 
+import { extraT } from './multiLang';
+
 export function t(key: TranslationKey, lang: Language): string {
-  return translations[key][lang];
+  const extra = extraT(key, lang);
+  if (extra) return extra;
+  const entry = translations[key] as Record<string, string>;
+  return entry[lang] ?? entry.en;
 }

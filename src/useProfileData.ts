@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useUserProfile } from '@/userProfile';
 
-export type Role = 'farmer' | 'officer';
+export type Role = 'farmer' | 'officer' | 'driver';
 
 export type FarmerProfile = {
   name: string;
